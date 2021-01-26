@@ -1,0 +1,40 @@
+body {
+  padding-bottom: 50px;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+#gallery li {
+  margin: 20px auto;
+  list-style: none;
+}
+
+#gallery li > img {
+  max-width: 1000px;
+}
+
+#validation-input {
+  padding: 10px;
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+div#boxes {
+  margin-top: 20px;
+}
+
+.inner-box {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10%;
+}
