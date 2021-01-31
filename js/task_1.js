@@ -11,15 +11,28 @@
 
 const categoryListRef = document.querySelector("#categories");
 const categoryItemsRefs = document.querySelectorAll('#categories li.item');
+
 const categoryListLength = categoryListRef.children.length;
-    
-const categoryInfo = [...categoryItemsRefs]
-    .map(el => `\nКатегория: ${el.firstElementChild.textContent}` +
-`\nКоличество элементов: ${el.lastElementChild.children.length}\n`);
-
 console.log(`В списке ${categoryListLength} категории.`);
-console.log(...categoryInfo);
 
+categoryItemsRefs.forEach(el => {
+    console.log(`Категория: ${el.firstElementChild.textContent}`);
+    console.log(`Количество элементов: ${el.lastElementChild.children.length}`);
+})
+
+//---------------------------------------------------------------   
+// const categoryListRef = document.querySelector("#categories");
+// const categoryItemsRefs = document.querySelectorAll('#categories li.item');
+// const categoryListLength = categoryListRef.children.length;
+
+// const categoryInfo = [...categoryItemsRefs]
+//     .map(el => `\nКатегория: ${el.firstElementChild.textContent}` +
+// `\nКоличество элементов: ${el.lastElementChild.children.length}\n`);
+
+// console.log(`В списке ${categoryListLength} категории.`);
+// console.log(...categoryInfo);
+
+//---------------------------------------------------------------
 // const categoryListRef = document.querySelector("#categories");
 // const categoriesRef = categoryListRef.children;
 // const animals = categoryListRef.firstElementChild;

@@ -41,4 +41,4 @@ const galleryListRef = document.querySelector('ul#gallery');
 images.map(el => {
   galleryListRef
     .insertAdjacentHTML('beforeend', `<li><img src = '${el.url}' alt = '${el.alt}'></li>`);
-})
+});
