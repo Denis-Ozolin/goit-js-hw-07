@@ -28,14 +28,17 @@ const images = [
 
 const galleryListRef = document.querySelector('ul#gallery');
 
-const gallery = images.map(el => {
-    const galleryItem = document.createElement('li');
-    const galleryImg = document.createElement('img');
-    galleryImg.setAttribute('src', el.url);
-    galleryImg.setAttribute('alt', el.alt);
-    galleryItem.appendChild(galleryImg);
+// const gallery = images.map(el => {
+//     const galleryItem = document.createElement('li');
+//     const galleryImg = document.createElement('img');
+//     galleryImg.setAttribute('src', el.url);
+//     galleryImg.setAttribute('alt', el.alt);
+//     galleryItem.appendChild(galleryImg);
 
-    return galleryItem;
+//     return galleryItem;
+// })
+
+images.map(el => {
+  galleryListRef
+    .insertAdjacentHTML('beforeend', `<li><img src = '${el.url}' alt = '${el.alt}'></li>`);
 })
-
-galleryListRef.append(...gallery);
