@@ -38,7 +38,13 @@ const galleryListRef = document.querySelector('ul#gallery');
 //     return galleryItem;
 // })
 
-images.map(el => {
-  galleryListRef
-    .insertAdjacentHTML('beforeend', `<li><img src = '${el.url}' alt = '${el.alt}'></li>`);
-});
+// const arr = images.map(el => {
+//   galleryListRef
+//     .insertAdjacentHTML('beforeend', `<li><img src = '${el.url}' alt = '${el.alt}'></li>`);
+//   return arr;
+// });
+
+const gallery = images.map(el => `<li><img src = '${el.url}' alt = '${el.alt}'></li>`).join('');
+
+galleryListRef.insertAdjacentHTML('beforeend', gallery);
+

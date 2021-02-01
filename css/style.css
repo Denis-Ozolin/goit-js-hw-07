@@ -2,18 +2,21 @@ body {
   padding-bottom: 50px;
 }
 
-#gallery {
+ul#gallery {
   display: flex;
   flex-direction: column;
+  background-color: rgb(247, 251, 253);
 }
 
 #gallery li {
-  margin: 20px auto;
+  margin: 5px auto;
   list-style: none;
 }
 
 #gallery li > img {
-  max-width: 1000px;
+  width: 800px;
+  border-radius: 10px;
+  border: 3px solid teal;
 }
 
 #validation-input {
